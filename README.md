@@ -1,2 +1,15 @@
 # STA-145-Final-Project
 Replication package for my Social Statistics 145 final project. Using data my group collected on Netflix TV shows first seasons, I tested whether a show's maturity rating (1 = TV-Y to 7 = TV-MA) predicts the number of industry awards it won during Season 1, using linear regression.
+
+## **Instructions**
+To access and utilize the script, open the "law,4_final_project.R" file, which contains the code for my findings. To access the dataset, open the "raw_data.csv" file. Place both files in the same folder, set the working directory to that folder in RStudio (Session > Set Working Directory > To Source File Location), and run the script from top to bottom. The script loads the data, generates the descriptive statistics, runs the linear regression, and produces the figures.
+
+## **Data**
+The data used for the analyses were gathered from the first seasons of over 250 of Netflix's most popular TV shows. The question being asked was whether a show's maturity rating is related to the number of industry awards it won during its first season. Each unit of analysis was one TV show, and [N] observations were collected. The type of sampling strategy that was used was convenience sampling. My group selected Netflix TV shows from an online list rather than using a random method.
+
+My group gathered the data by taking each show from the online list and looking up its maturity rating on Rotten Tomatoes. We then searched official award databases to count the total number of industry awards the show won during the time of Season 1. Each group member filled in whatever data they felt like that day until we combined the results into one shared spreadsheet. Some data cleaning was necessary. Several entries were recorded as text rather than numeric values (for example, some people entered "N/A" instead of leaving it blank), so we converted these to numeric values according to the codebook. Some variables that were originally planned for collection were too difficult to find reliable information for, so they were removed from the dataset and are not part of the analysis. Overall, the data required only minimal cleaning, and 282 observations remained for analysis.
+
+## **Operationalization**
+The concept of how mature or restricted a show's content is was operationalized as a variable named content_rating, using the show's official maturity rating listed on Rotten Tomatoes. It was coded on a scale from 1-7: 1 = TV-Y, 2 = TV-Y7, 3 = TV-Y7-FV, 4 = TV-G, 5 = TV-PG, 6 = TV-14, and 7 = TV-MA. Shows with lower scores target younger audiences, while shows with higher scores target more mature audiences. For the linear regression, this variable was treated as quantitative so that each one-unit increase represents a step toward a more mature rating.
+
+We operationalized a show's critical and industry recognition as a quantitative variable called awards, defined as the total number of industry awards the show won during Season 1. It is measured in whole numbers, starting at 0, with higher numbers meaning more recognition. To measure this concept, our group counted the awards listed for each show in official award databases.
